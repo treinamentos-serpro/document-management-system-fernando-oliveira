@@ -1,0 +1,36 @@
+Texto da Demanda
+
+** Desenvolver uma funcionalidade para disponibilizar o histórico de documentos incluídos ou substituídos no processo pelo relator para o julgamento. 
+
+Detalhamento
+
+ - Deverá haver uma funcionalidade em que o usuário possa acessar e, caso queira, baixar as versões registradas dos documentos de apoio que foram incluídos ou substituídos no processo para julgamento. 
+
+ - Usar a tela (ngx/relatorios/verificacao-procedimentos/documentos-apoio-julgamento) para apoiar na definição dos requisitos, arquitetura, definição de tarefas e para integrar com o backend.
+
+REGRAS:
+
+- Os documentos de apoio que o usuário pode consultar são: Voto do Relator, Voto Divergente e Declaração de Voto
+
+- Não terá ação de excluir documento, apenas as opções de realizar o download original e o pdf assinado
+  Ver padrão no componente julgamento-documento-list
+
+- Deve ter a opção de o usuário selecionar mais de um documento para realizar o download desses documentos. Esses documentos devem ser zipados em um arquivo único. 
+  Ver padrão no componente julgamento-documento-list
+
+- Alterar período de operação para período de anexação
+
+- O filtro de Tipo de unidade, Unidade e Equipe deve ser aplicado da seguinte forma:
+
+    - Caso o processo esteja pautado em uma reunião deve ser aplicado na equipe da reunião
+    - Caso o processo não esteja pautado deve ser aplicado sobre a localização atual do processo
+
+ - Os campos obrigatórios para o filtro são:
+ 
+    - Tipo 
+    - Unidade
+    - Equipe 
+
+OBSERVAÇÕES: 
+- As consultas devem ser paginadas
+- Ajustar a tela no que for necessário
